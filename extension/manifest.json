@@ -1,0 +1,19 @@
+{
+    "manifest_version": 3,
+    "name": "Chrome New Tab Custom",
+    "description": "Chrome Extension을 통한 Chrome 새 탭 커스텀",
+    "version": "1.0",
+    "icons": {
+        "16": "images/",
+        "32": "images/",
+        "64": "images/",
+        "128": "images/"
+    },
+    "backgroud": {
+        "service_worker": "backgroud.js"
+    },
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    }
+
+}
