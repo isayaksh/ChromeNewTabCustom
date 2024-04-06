@@ -1,0 +1,93 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    /* background-color: #27202d; */
+    background-image: url("../images/background.jpeg");
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+    color: white; /* 링크의 색상을 부모 요소의 색상으로 상속 */
+}
+
+.container {
+    width: 100%;
+}
+
+.gap {
+    margin: 2rem;
+}
+
+nav {
+    display: flex;
+    justify-content: flex-end; /* 내부 요소들을 오른쪽으로 정렬 */
+}
+
+
+.terminal {
+    display: flex;
+    justify-content: center; /* 가로 가운데 정렬 */
+}
+
+.terminal .head {
+    display: flex;
+    border-radius: 10px 10px 0 0;
+    background-color: #27202d;
+    color: #a899b8;
+
+    font-size: 1.1rem;    
+    font-weight: bold;
+}
+
+.terminal .head .title {
+    margin: 0 auto;
+}
+
+.terminal .body {
+    display: flex;
+    border-radius: 0 0 10px 10px;
+    background-color: #0d0d0d;
+    color: #24ff39;
+    font-size: 1.1rem;
+    font-weight: bold;
+    opacity: 0.8;
+}
+
+.terminal .body .title {
+    margin: 1rem;
+}
+
+.terminal .body .search {
+    margin: 1rem 1rem 1rem 0;
+    font-size: 1.1rem;
+    font-weight: bold;
+    caret-shape: underscore;
+}
+
+#search {
+    color: #24ff39;
+    background-color: #0d0d0d;
+    outline: none; /* 클릭 시 나타나는 기본 테두리 효과 제거 */
+    border: none; /* 테두리 제거 */
+}
+
+
+
+.line {
+    width: 40vw;
+    border: 2px solid #5f5b64;
+    border-radius: 10px;
+}
+
+.dot {
+    display: inline-block;
+    width: 0.8vw;
+    height: 0.8vw;
+    border-radius: 100%;
+    background-color: white;
+
+    margin: 0.5vh;
+}
