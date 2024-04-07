@@ -67,6 +67,10 @@ nav {
     caret-shape: underscore;
 }
 
+.terminal .body .search input{
+    width: 100%;
+}
+
 #search {
     color: #24ff39;
     background-color: #0d0d0d;
