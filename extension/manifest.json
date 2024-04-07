@@ -3,7 +3,10 @@
     "name": "Chrome New Tab Custom",
     "description": "Chrome Extension을 통한 Chrome 새 탭 커스텀",
     "version": "1.0",
-    "permissions": ["contextMenus"],
+    "permissions": [
+        "contextMenus",
+        "unlimitedStorage"
+    ],
     "background": {
         "service_worker": "js/background.js"
     },
