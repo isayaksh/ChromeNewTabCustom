@@ -7,8 +7,45 @@ chrome.runtime.onInstalled.addListener(() => {
 });
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-    console.log("click");
     if (info.menuItemId === 'Save') {
-        console.log("save");
+
+        const url = tab.url; // 현재 페이지의 URL 가져오기
+        let today = getCurrentDateTime();
+
+        chrome.storage.local.get('urls', (data) => {
+            const urls = data.urls || [];
+
+            urls.push({date: today, url: url});
+
+            chrome.storage.local.set({ 'urls': urls }, () => {
+                console.log('URL 저장 완료!');
+            });
+
+        })
+
     }
 });
+
+function getCurrentDateTime() {
+    const currentDate = new Date();
+
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const hours = String(currentDate.getHours()).padStart(2, '0');
+    const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+    const seconds = String(currentDate.getSeconds()).padStart(2, '0');
+
+    return `${year}.${month}.${day} ${hours}:${minutes}:${seconds}`;
+}
+
+// chrome.storage.local.get('urls', (data) => {
+//     const urls = data.urls;
+//     // content script로 메시지를 전송
+//     console.log("[background.js] chrome.storage.local.get(): " + urls);
+
+//     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+//         chrome.tabs.sendMessage(tabs[0].id, { urls: urls });
+//     });
+
+// });
