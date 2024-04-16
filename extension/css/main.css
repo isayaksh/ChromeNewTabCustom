@@ -3,18 +3,18 @@ body {
     height: 100%;
     margin: 0;
     padding: 0;
-    /* background-color: #27202d; */
-    background-image: url("../images/background.jpeg");
+    background-color: #202124;
     background-size: cover;
 }
 
 a {
     text-decoration: none;
-    color: white; /* 링크의 색상을 부모 요소의 색상으로 상속 */
+    color: #d6d9dc; /* 링크의 색상을 부모 요소의 색상으로 상속 */
 }
 
-.container {
-    width: 100%;
+input {
+    font-size: large;
+    font-weight: bold;
 }
 
 .gap {
@@ -22,6 +22,8 @@ a {
 }
 
 nav {
+    font-size: large;
+    font-weight: bold;
     display: flex;
     justify-content: flex-end; /* 내부 요소들을 오른쪽으로 정렬 */
 }
@@ -53,7 +55,7 @@ nav {
     color: #24ff39;
     font-size: 1.1rem;
     font-weight: bold;
-    opacity: 0.8;
+    opacity: 0.7;
 }
 
 .terminal .body .title {
@@ -78,8 +80,6 @@ nav {
     border: none; /* 테두리 제거 */
 }
 
-
-
 .line {
     width: 40vw;
     border: 2px solid #5f5b64;
@@ -94,4 +94,46 @@ nav {
     background-color: white;
 
     margin: 0.5vh;
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap; /* 요소들이 세로로 쌓이고 넘치면 다음 줄로 */
+    height: 80vh;
+    align-content: flex-start;
+}
+
+.memo {
+    color: #d6d9dc;
+
+    background-color: #2d2e30;
+
+    margin: 1vw;
+    width: 330px;
+    
+
+    border-radius: 0.8rem;
+    border: 2px solid #4f5156;
+
+    box-shadow: 0 4px 34px rgba(0, 0, 0, 0.15);
+    opacity: 0.7;
+}
+
+.memo .header {
+    
+    font-weight: bold;
+
+    width: 100%;
+    height: 3vh;
+
+    line-height: 3vh;
+    text-align: center;
+}
+
+.memo .body {
+    width: 100%;
+    height: 100%;
+    margin: 0.5rem;
+    overflow-wrap: break-word;
 }
