@@ -38,14 +38,3 @@ function getCurrentDateTime() {
 
     return `${year}.${month}.${day} ${hours}:${minutes}:${seconds}`;
 }
-
-// chrome.storage.local.get('urls', (data) => {
-//     const urls = data.urls;
-//     // content script로 메시지를 전송
-//     console.log("[background.js] chrome.storage.local.get(): " + urls);
-
-//     chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
-//         chrome.tabs.sendMessage(tabs[0].id, { urls: urls });
-//     });
-
-// });
