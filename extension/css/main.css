@@ -96,6 +96,18 @@ nav {
     margin: 0.5vh;
 }
 
+.dot-cancel {
+    position: absolute;
+    top: 0;
+    right: 0;
+    
+    width: 0.6vw;
+    height: 0.6vw;
+    border-radius: 100%;
+
+    background-color: #ff524e;
+}
+
 .board {
     display: flex;
     flex-direction: column;
@@ -122,6 +134,8 @@ nav {
 }
 
 .memo .header {
+
+    position: relative;
     
     font-weight: bold;
 

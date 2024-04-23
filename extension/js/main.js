@@ -35,6 +35,9 @@ function createMemo(title, body) {
     header.classList.add('header');
     header.textContent = title;
 
+    const cancelButton = document.createElement('div');
+    cancelButton.classList.add('dot-cancel');
+
     const bodyDiv = document.createElement('div');
     bodyDiv.classList.add('body');
 
@@ -44,6 +47,7 @@ function createMemo(title, body) {
     bodyLink.target = '_blank'
 
     bodyDiv.appendChild(bodyLink);
+    header.appendChild(cancelButton);
     memo.appendChild(header);
     memo.appendChild(bodyDiv);
 
